@@ -9,11 +9,16 @@
     color: var(--content-secondary);
     font: var(--label-medium);
     transition: all 100ms ease-in-out;  
-
   }  
 }
 
+/* default */
 .input-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .1rem;
+
   background-color: var(--background-secondary);
   color: var(--content-primary);
   font: var(--display-small);
@@ -25,7 +30,20 @@
   border: none;
   border-radius: .5rem;
 
-  transition: all 200ms ease-in-out;  
+  transition: all 200ms ease-in-out;
+  
+  & > input {
+    appearance: none;
+    all: unset;
+    resize: none;
+    field-sizing: content;
+    caret-color: transparent;
+  }
+  
+  & > img {
+    display: none;
+    height: 2rem;
+  }
 }
 
 /* hover */
@@ -63,7 +81,11 @@
     
     & .input-number {
       background: var(--background-tertiary);
-      outline: none;
+
+      & > img {
+        display: block;
+        animation: FieldAnimation 1500ms ease-in-out infinite;
+      }
     }
     
     &::before {
@@ -77,5 +99,28 @@
   }
 }
 
+/* Animação para o input em foco */
+@keyframes FieldAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
 
+  51% {
+    opacity: 0;
+  }  
+}
 
+/* componente */
+/* 
+<div class="number-wrapper">
+  <label for="input-number">LABEL</label>
+  <div class="gradient-border">
+    <label for="input-number">
+      <div class="input-number">
+        <input id="input-number" type="text" required  value="100" minlength="1" maxlength="3"/>
+        <img src="assets/icons/animation-field.svg" alt="|">
+      </div>
+    </label>
+  </div>
+</div>
+ */
