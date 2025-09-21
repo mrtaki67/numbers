@@ -1,5 +1,5 @@
 .button-border {
-  display: flex;
+  display: none;
   position: relative;
   padding: 2px;
   transition: all 300ms ease-in-out;
@@ -8,7 +8,7 @@
     appearance: none;
     all: unset;
     cursor: pointer;
-  
+    
     display: flex;
     align-items: center;
     justify-content: center;
