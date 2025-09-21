@@ -1,0 +1,29 @@
+#page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4.75rem 8.375rem;
+
+  & > header {
+    width: 100%;
+
+    & > div {
+      margin-bottom: 4.75rem;
+      display: flex;
+      align-items: center;
+      gap: .6875rem;
+      align-self: start;
+    }
+  }
+  
+
+  & > main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6.75rem;
+  }
+}
+
+
+
