@@ -146,6 +146,7 @@ form {
   & > header {
     & > h2 {
       font: var(--label-large);
+      text-transform: uppercase;
     }
 
     & > p {
@@ -153,6 +154,14 @@ form {
       color: var(--content-secondary);
     }
   }
+}
+
+@media (width <= 80em) {
+  h1 {
+    font: var(--display-medium);
+    text-transform: uppercase;
+    margin-top: .75rem ;
+  }  
 }
 
 

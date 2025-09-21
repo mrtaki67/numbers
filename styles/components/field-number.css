@@ -39,6 +39,7 @@
     resize: none;
     field-sizing: content;
     caret-color: transparent;
+    /* width: 100%; */
   }
   
   & > img {

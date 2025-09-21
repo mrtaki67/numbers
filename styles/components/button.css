@@ -26,7 +26,6 @@
     transition: all 250ms ease-in-out;
   }
 
-
   &:hover::before {
     content: "";
     position: absolute;
